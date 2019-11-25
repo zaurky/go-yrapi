@@ -184,7 +184,7 @@ func WeatherIcon(symbol int, contentType string, isNight bool, isPolarNight bool
 
 func LocationforecastLTS(lat float64, lng float64) (WeatherData, error) {
   // Query the external API
-  url := fmt.Sprintf("http://api.yr.no/weatherapi/locationforecastlts/1.2/?lat=%3.5f;lon=%3.5f", lat, lng)
+  url := fmt.Sprintf("https://api.met.no/weatherapi/locationforecast/1.9/?lat=%3.5f;lon=%3.5f", lat, lng)
 
   resp, err := http.Get(url)
   if err != nil {
